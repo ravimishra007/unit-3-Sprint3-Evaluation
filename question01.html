@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation-3</title>
+    <style>
+        @keyframes pandaAnimation1 {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            25% {
+                border: black solid 5px;
+                /* border-radius: 5px; */
+                /* transform: translateY(0); */
+                opacity: 1;
+            }
+            50% {
+                border: orange solid 15px;
+                transform: translateY(50%);
+                opacity: 0;
+            }
+            75% {
+                border: rgb(17, 11, 1);
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100%);
+                opacity: 1;
+                border: black;
+            }
+        }
+       
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .container{
+              width: auto;
+              height: 600px;
+              position: relative;
+              display: flex ;
+              justify-content: center;
+              align-items: center;
+        }
+        .container1{
+            position: relative;
+            height: 80px;
+            width: 80px;
+            background-color: orange;
+            rotate: 45deg;
+            transition:background-color ease-in-out 2s;
+;
+        }
+        .container1:hover{
+            
+            background-color: brown;
+        }
+        .panda{
+            margin-left: 500px;
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 10px solid black;
+            background-image: url(new\ panda.jpg);
+            background-size: cover;
+            float: right;
+            animation: pandaAnimation1 3s infinite;
+        }
+        .panda.right{
+            margin-right: 500px;
+            float: left;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="panda"></div>
+        <div class="panda right"></div>
+        <div class="container1">
+
+        </div>
+    </div>
+    
+</body>
+</html>
